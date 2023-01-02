@@ -1,0 +1,22 @@
+@import "nullstyle";
+@import "fonts";
+
+body {
+	font-family: robotoRegular;
+	background-color: #f1f1f1;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+.container {
+	max-width: 1793px;
+	margin: 0 auto;
+	padding: 0 25px;
+}
+
+@import "header";

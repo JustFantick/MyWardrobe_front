@@ -1,0 +1,29 @@
+$maxWidth: 1920; //верхнее пиковое знач на ширине экрана 1280px
+
+@function adaptValue($pcSize, $mbSize) {
+	// vw = viewport Width = ширина экрана
+	// при vw = 1280px, return pcSize;
+	// при vw = 320px, return mbSize;
+	$addSize: $pcSize - $mbSize;
+	$maxWidth: $maxWidth - 390;
+
+	// if(vw > 1280px) {значение return будет равномерно увеличиваться сверх pcSize}
+	@return calc(#{$mbSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+//color vars
+
+//Buttons:
+$btnPadTop: 10px;
+
+@mixin btnBorderParams {
+	border: 1.5px solid #D9D9D9;
+	border-radius: 99px;
+}
+@mixin btnTextParams {
+	font-family: robotoMedium;
+	letter-spacing: 0.0075em;
+	color: #D9D9D9;
+}
+//usage
+//@include btnBorderParams;
