@@ -316,6 +316,7 @@
 
 	$horizontPad: adaptValue(51, 20);
 	&__goback {
+		cursor: pointer;
 		padding: 56px $horizontPad 30px $horizontPad;
 		border-bottom: 1px solid black;
 
