@@ -29,31 +29,20 @@ export function cartActivate() {
 	const myCartBtnMb = document.querySelector('.mycart_mb');
 	const myCartBody = document.querySelector('.mycart-popup');
 
+	//openPopup
 	if (window.innerWidth > 420) {
-		myCartBtn.onclick = function () {
-			myCartBody.classList.add('active');
-
-			myCartBody.onclick = function (e) {
-				let target = e.target;
-
-				if (target.closest('.mycart-popup__goback') || target == myCartBody) {
-					myCartBody.classList.remove('active');
-				}
-			}
-		}
+		myCartBtn.onclick = () => myCartBody.classList.add('active');
 	} else {
-		myCartBtnMb.onclick = function () {
-			myCartBody.classList.add('active');
-
-			myCartBody.onclick = function (e) {
-				let target = e.target;
-
-				if (target.closest('.mycart-popup__goback') || target == myCartBody) {
-					myCartBody.classList.remove('active');
-				}
-			}
-		}
+		myCartBtnMb.onclick = () => myCartBody.classList.add('active');
 	}
 
+	//closePopup
+	myCartBody.onclick = function (e) {
+		let target = e.target;
+
+		if (target.closest('.mycart-popup__goback') || target == myCartBody) {
+			myCartBody.classList.remove('active');
+		}
+	}
 
 }
