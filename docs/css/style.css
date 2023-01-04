@@ -114,6 +114,36 @@ img {
   font-style: normal;
 }
 
+.search_icon {
+  width: 16px;
+  height: 15px;
+}
+
+.search_mb {
+  width: 25px;
+  height: 24px;
+}
+
+.close_icon {
+  width: 15px;
+  height: 15px;
+}
+
+.mycart_icon {
+  width: 23px;
+  height: 30px;
+}
+
+.mycart_mb {
+  width: 31px;
+  height: 35px;
+}
+
+.big_arrow_left {
+  width: 23px;
+  height: 41px;
+}
+
 body {
   font-family: robotoRegular;
   background-color: #f1f1f1;
@@ -398,6 +428,7 @@ body {
 }
 
 .mycart-popup__goback {
+  cursor: pointer;
   padding: 56px calc(20px + 31 * ((100vw - 320px) / 1530)) 30px calc(20px + 31 * ((100vw - 320px) / 1530));
   border-bottom: 1px solid black;
   display: -webkit-box;

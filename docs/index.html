@@ -4,21 +4,21 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230102204618">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230104185126">
 	<title>Home</title>
 </head>
 
 <body>
-	<header class="header">
+	<div class="wrapper">
+		<header class="header">
 	<div class="mycart-popup">
 		<div class="mycart-popup__content">
 			<div class="mycart-popup__goback">
-				<img src="../img/big_arrow_left.svg" alt="">
+				<img class="big_arrow_left" src="./img/icons/icons.svg#big_arrow_left" alt="big_arrow_left">
 				<h3>Continue shopping</h3>
 			</div>
 			<div class="mycart-popup__items-list">
 				<h3 class="mycart-popup__items-title">Your cart</h3>
-
 				<div class="mycart-item">
 					<div class="mycart-item__name">Bobby pro 15’6 backpack</div>
 					<div class="mycart-item__size">
@@ -42,7 +42,6 @@
 
 					</div>
 					<div class="mycart-item__price">$300</div>
-
 				</div>
 
 			</div>
@@ -61,11 +60,11 @@
 			<h2>Wardrobe</h2>
 		</div>
 		<div class="header__bottom">
-			<img class="search_mb" src="../img/search_icon_mb.svg" alt="">
+			<img class="search_mb" src="./img/icons/icons.svg#search_icon_mb" alt="search_icon_mb">
 			<div class="searchbar">
-				<img class="searchbar__search-icon" src="../img/search_icon.svg" alt="">
+				<img class="searchbar__search-icon search_icon" src="./img/icons/icons.svg#search_icon" alt="search_icon">
 				<input class="searchbar__text" type="text" placeholder="Find what`s you need">
-				<img class="searchbar__close-icon" src="../img/close_icon.svg" alt="">
+				<img class="searchbar__close-icon close_icon" src="./img/icons/icons.svg#close_icon" alt="close_icon">
 			</div>
 
 			<nav class="navigation" data-da=".header,1390,first">
@@ -81,9 +80,9 @@
 
 			</nav>
 
-			<img class="mycart_mb" src="../img/mycart_mb.svg" alt="">
+			<img class="mycart_mb" src="./img/icons/icons.svg#mycart_mb" alt="mycart_mb">
 			<div class="mycart">
-				<img class="mycart__icon" src="../img/mycart_icon.svg" alt="">
+				<img class="mycart__icon mycart_icon" src="./img/icons/icons.svg#mycart_icon" alt="mycart_icon">
 				<div class="mycart__text">My cart</div>
 
 			</div>
@@ -99,11 +98,14 @@
 	</div>
 
 </header>
-	<main>
-	</main>
-	<footer></footer>
 
-	<script src="js/app.min.js?_v=20230102204618"></script>
+		<main class="main">
+		</main>
+
+		<footer></footer>
+	</div>
+
+	<script src="js/app.min.js?_v=20230104185126"></script>
 </body>
 
 </html>
