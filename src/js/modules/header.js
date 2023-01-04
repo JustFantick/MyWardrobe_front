@@ -30,11 +30,8 @@ export function cartActivate() {
 	const myCartBody = document.querySelector('.mycart-popup');
 
 	//openPopup
-	if (window.innerWidth > 420) {
-		myCartBtn.onclick = () => myCartBody.classList.add('active');
-	} else {
-		myCartBtnMb.onclick = () => myCartBody.classList.add('active');
-	}
+	myCartBtn.onclick = () => myCartBody.classList.add('active');
+	myCartBtnMb.onclick = () => myCartBody.classList.add('active');
 
 	//closePopup
 	myCartBody.onclick = function (e) {
