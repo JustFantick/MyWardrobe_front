@@ -677,12 +677,15 @@ body {
     transition: all 0.3s ease-in-out;
     position: absolute;
     z-index: 99;
-    top: -100%;
     left: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10vh 0;
     background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    -webkit-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+            transform: translate(0, -100%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -704,7 +707,9 @@ body {
   }
 
   .navigation.active {
-    top: 0;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   .menu-burger {
