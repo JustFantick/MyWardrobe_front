@@ -4,13 +4,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230104193434">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230105214429">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230105214429" />
 	<title>Home</title>
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<div class="wrapper__header-absolute">
+			<header class="header">
 	<div class="mycart-popup">
 		<div class="mycart-popup__content">
 			<div class="mycart-popup__goback">
@@ -98,14 +100,48 @@
 	</div>
 
 </header>
+		</div>
 
-		<main class="main">
-		</main>
-
-		<footer></footer>
+		<!-- Slider main container -->
+<main class="swiper main-slider">
+	<!-- Additional required wrapper -->
+	<div class="swiper-wrapper">
+		<!-- Slides -->
+		<div class="swiper-slide"><picture><source srcset="../img/slide1.webp" type="image/webp"><img src="../img/slide1.png" alt="slide1"></picture></div>
+		<div class="swiper-slide"><picture><source srcset="../img/slide2.webp" type="image/webp"><img src="../img/slide2.png" alt="slide2"></picture></div>
+		<div class="swiper-slide"><picture><source srcset="../img/slide4.webp" type="image/webp"><img src="../img/slide4.png" alt="slide3"></picture></div>
 	</div>
 
-	<script src="js/app.min.js?_v=20230104193434"></script>
+	<!-- If we need pagination -->
+	<div class="swiper-pagination"></div>
+</main>
+		<section class="brands">
+	<div class="brands__body">
+		<picture><source srcset="../img/brand_1.webp" type="image/webp"><img src="../img/brand_1.png" alt="brand_1.png" class="brands__item"></picture>
+		<picture><source srcset="../img/brand_2.webp" type="image/webp"><img src="../img/brand_2.png" alt="brand_2.png" class="brands__item"></picture>
+		<picture><source srcset="../img/brand_3.webp" type="image/webp"><img src="../img/brand_3.png" alt="brand_3.png" class="brands__item"></picture>
+		<picture><source srcset="../img/brand_4.webp" type="image/webp"><img src="../img/brand_4.png" alt="brand_4.png" class="brands__item"></picture>
+		<picture><source srcset="../img/brand_5.webp" type="image/webp"><img src="../img/brand_5.png" alt="brand_5.png" class="brands__item"></picture>
+
+	</div>
+
+</section>
+
+		<footer class="footer">
+	<div class="footer__body container">
+		<div class="footer__author">© 2022 JustFantick, Inc.</div>
+		<div class="footer__scroll-top-btn scroll-top-btn">
+			<p>Scroll to top</p>
+			<img class="arrow-top" src="./img/icons/icons.svg#arrow_top" alt="arrow_top">
+		</div>
+
+	</div>
+
+</footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20230105214429"></script>
+	<script src="js/app.min.js?_v=20230105214429"></script>
 </body>
 
 </html>
