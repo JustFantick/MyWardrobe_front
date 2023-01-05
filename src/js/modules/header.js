@@ -1,26 +1,28 @@
 export function menuBurgerActivate() {
-	const menuIcon = document.querySelector('.menu-burger');
-	const navigation = document.querySelector('.navigation');
+	if (window.innerWidth < 1390) {
+		const menuIcon = document.querySelector('.menu-burger');
+		const navigation = document.querySelector('.navigation');
 
-	menuIcon.onclick = function () {
-		menuIcon.classList.toggle('active');
-		navigation.classList.toggle('active');
-	}
+		menuIcon.onclick = function () {
+			menuIcon.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
 
-	navigation.onclick = function () {
-		menuIcon.classList.remove('active');
-		navigation.classList.remove('active');
-	}
+		navigation.onclick = function () {
+			menuIcon.classList.remove('active');
+			navigation.classList.remove('active');
+		}
 
-	const item = document.querySelector('.header__body');
-	const search = document.querySelector('.search_mb');
-	const closeBtn = document.querySelector('.searchbar__close-icon');
-	search.onclick = function () {
-		item.classList.add('active');
-	}
+		const item = document.querySelector('.header__body');
+		const search = document.querySelector('.search_mb');
+		const closeBtn = document.querySelector('.searchbar__close-icon');
+		search.onclick = function () {
+			item.classList.add('active');
+		}
 
-	closeBtn.onclick = function () {
-		item.classList.remove('active');
+		closeBtn.onclick = function () {
+			item.classList.remove('active');
+		}
 	}
 }
 

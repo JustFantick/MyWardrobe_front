@@ -1,0 +1,18 @@
+.brands {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	&__body {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		gap: 10px;
+		flex-wrap: wrap;
+
+		padding: adaptValue(41, 30) 35px;
+
+		background: url('../img/tree_branch_left.png') 0 5% no-repeat, 
+		url('../img/tree_branch_right.png') 100% 80% no-repeat;
+	}
+}

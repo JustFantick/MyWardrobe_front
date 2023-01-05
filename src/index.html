@@ -6,14 +6,17 @@
 
 <body>
 	<div class="wrapper">
-		@@include('html/header.html',{})
+		<div class="wrapper__header-absolute">
+			@@include('html/header.html',{})
+		</div>
 
-		<main class="main">
-		</main>
+		@@include('html/main-slider.html', {})
+		@@include('html/brands.html', {})
 
 		@@include('html/footer.html',{})
 	</div>
 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 

@@ -1,5 +1,6 @@
 @import "nullstyle";
 @import "fonts";
+@import "useful";
 
 @import "svg-sprite";
 
@@ -14,6 +15,19 @@ body {
 	min-height: 100vh;
 	max-width: 100%;
 	overflow: hidden;
+
+	&__header-absolute {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+
+		z-index: 99;
+	}
+
+	.brands {
+		flex: 1 1 auto;
+	}
 }
 .container {
 	max-width: 1793px;
@@ -22,3 +36,6 @@ body {
 }
 
 @import "header";
+@import "main-slider";
+@import "brands";
+@import "footer";
