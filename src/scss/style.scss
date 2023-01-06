@@ -7,6 +7,24 @@
 body {
 	font-family: robotoRegular;
 	background-color: #f1f1f1;
+
+	overflow: auto;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+@media (min-width: 1024px) {
+	// custom scrollBar
+	::-webkit-scrollbar {
+		width: 3px;
+		&-track {
+			background: #181818;
+		}
+		&-thumb {
+			background: #f1f1f1;
+		}
+	}
 }
 
 .wrapper {

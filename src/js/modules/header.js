@@ -2,15 +2,18 @@ export function menuBurgerActivate() {
 	if (window.innerWidth < 1390) {
 		const menuIcon = document.querySelector('.menu-burger');
 		const navigation = document.querySelector('.navigation');
+		const body = document.querySelector('body');
 
 		menuIcon.onclick = function () {
 			menuIcon.classList.toggle('active');
 			navigation.classList.toggle('active');
+			body.classList.toggle('lock');
 		}
 
 		navigation.onclick = function () {
 			menuIcon.classList.remove('active');
 			navigation.classList.remove('active');
+			body.classList.remove('lock');
 		}
 
 		const item = document.querySelector('.header__body');
@@ -30,10 +33,17 @@ export function cartActivate() {
 	const myCartBtn = document.querySelector('.mycart');
 	const myCartBtnMb = document.querySelector('.mycart_mb');
 	const myCartBody = document.querySelector('.mycart-popup');
+	const body = document.querySelector('body');
 
 	//openPopup
-	myCartBtn.onclick = () => myCartBody.classList.add('active');
-	myCartBtnMb.onclick = () => myCartBody.classList.add('active');
+	myCartBtn.onclick = () => {
+		myCartBody.classList.add('active');
+		body.classList.add('lock');
+	};
+	myCartBtnMb.onclick = () => {
+		myCartBody.classList.add('active');
+		body.classList.add('lock');
+	};
 
 	//closePopup
 	myCartBody.onclick = function (e) {
@@ -41,6 +51,7 @@ export function cartActivate() {
 
 		if (target.closest('.mycart-popup__goback') || target == myCartBody) {
 			myCartBody.classList.remove('active');
+			body.classList.remove('lock');
 		}
 	}
 

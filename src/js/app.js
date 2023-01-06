@@ -13,7 +13,7 @@ footerBtnActivate();
 const swiper = new Swiper('.main-slider', {
 	allowTouchMove: false,
 	autoplay: {
-		delay: 1000,
+		delay: 5000,
 	},
 	pagination: {
 		el: ".swiper-pagination",
