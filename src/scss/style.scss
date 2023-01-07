@@ -43,7 +43,7 @@ body {
 		z-index: 99;
 	}
 
-	.brands {
+	.brands, .items-container {
 		flex: 1 1 auto;
 	}
 }
@@ -57,3 +57,4 @@ body {
 @import "main-slider";
 @import "brands";
 @import "footer";
+@import "items";
