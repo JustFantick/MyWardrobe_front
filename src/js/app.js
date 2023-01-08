@@ -10,15 +10,4 @@ header.cartActivate();
 
 useDynamicAdapt();
 footerBtnActivate();
-//sortBtnActivate();
-
-// const swiper = new Swiper('.main-slider', {
-// 	allowTouchMove: false,
-// 	autoplay: {
-// 		delay: 5000,
-// 	},
-// 	pagination: {
-// 		el: ".swiper-pagination",
-// 		clickable: true,
-// 	},
-// });
+if (document.querySelector('.sort-btn')) sortBtnActivate();
