@@ -27,3 +27,12 @@ $btnPadTop: 10px;
 }
 //usage
 //@include btnBorderParams;
+
+
+//FrequentlyUsedBlocks
+.section-title {
+	font-family: robotoBold;
+	font-size: adaptValue(36, 28);
+	line-height: 1.5;	
+	color: #000000;
+}

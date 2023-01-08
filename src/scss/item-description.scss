@@ -1,0 +1,187 @@
+.item-description {
+	padding: 50px 0;
+
+	&__title {
+		text-align: center;
+		padding: 0 20px;
+
+		margin-bottom: adaptValue(35, 20);
+	}
+
+	&__body {
+		max-width: 1380px;
+		margin: 0 auto;
+		padding: 0 20px;
+
+		display: flex;
+		justify-content: space-between;
+		gap: adaptValue(70, 25);
+	}
+
+	&__slider {
+		flex: 1 1 adaptValue(690, 350);
+	}
+}
+
+.description {
+	max-width: 578px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: adaptValue(25, 20);
+
+	&__price {
+		font-size: adaptValue(32, 24);
+		line-height: 1.18;		
+		color: #000000;
+		span {
+			font-family: robotoBold;
+			letter-spacing: 0.03em;
+		}
+	}
+
+	$paddingLeft: 20px;
+	&__amount-n-sizes,
+	&__add-to-cart-btn,
+	&__price {
+		padding-left: $paddingLeft;
+	}
+
+	&__text {
+		font-size: adaptValue(24, 16);
+		line-height: 1.7;		
+		color: #000000;
+
+		&::first-letter {
+			padding-left: $paddingLeft;
+		}
+	}
+
+	&__amount-n-sizes {
+		display: flex;
+		gap: adaptValue(45, 20);
+	}
+}
+
+//Sections Amount & Sizes
+@mixin sectTextparams {
+	font-family: robotoBold;
+	font-size: adaptValue(24, 18);
+	line-height: 1.16;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+$padOutSide: 13px;
+$padInSide: 8px;
+$padVertical: 8px;
+
+.amount {
+	border-radius: 90px;
+	overflow: hidden;
+	display: flex;
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 2px solid #000000;
+		border-radius: 90px;
+		z-index: -1;
+	}
+
+	//border between sections
+	& div {
+		border-left: 2px solid #000000;
+		&:first-child {
+			border-left: 0px solid #000000;
+		}
+	}
+	
+	&__minus, &__plus {
+		@include sectTextparams();
+		
+		display: inline-block;
+		padding-top: $padVertical;
+		padding-bottom: $padVertical;
+
+		cursor: pointer;
+	}
+	
+	&__minus {
+		padding-left: $padOutSide;
+		padding-right: $padInSide;
+	}
+
+	&__plus {
+		padding-right: $padOutSide;
+		padding-left: $padInSide;
+	}
+
+	&__number {
+		display: inline-block;
+		@include sectTextparams();
+		padding: $padVertical $padOutSide;
+		background-color: #5a5b6a;
+		color: #f1f1f1;
+	}
+
+}
+
+.sizes {
+	border-radius: 90px;
+	overflow: hidden;
+	display: flex;
+
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 2px solid #000000;
+		border-radius: 90px;
+		z-index: -1;
+	}
+	
+	&__section {
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		@include sectTextparams();
+		padding: $padVertical $padOutSide;
+
+		&:first-child {
+			padding-left: $padOutSide;
+			padding-right: $padInSide;
+		}
+
+		&:last-child {
+			padding-right: $padOutSide;
+			padding-left: $padInSide;
+		}
+
+		//border between sections
+		border-left: 2px solid #000000;
+		&:first-child {
+			border-left: 0px solid #000000;
+		}
+
+		&.active {
+			background-color: #5a5b6a;
+			color: #f1f1f1;
+		}
+		
+		@media (min-width: 768px) {
+			&:hover {
+				background-color: rgba(90, 91, 106, 0.8);
+				color: #f1f1f1;
+			}
+		}
+	}
+}

@@ -48,7 +48,7 @@ body {
 		}
 	}
 
-	.brands, .items-container {
+	.brands, .items-container, .item-description {
 		flex: 1 1 auto;
 	}
 }
@@ -63,3 +63,4 @@ body {
 @import "brands";
 @import "footer";
 @import "items";
+@import "item-description";
