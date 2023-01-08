@@ -1,5 +1,8 @@
 .items-container {
 	padding: 50px 0;
+
+	background: url('../img/tree_branch_left.png') 0 20% no-repeat fixed,
+		url('../img/tree_branch_right.png') 100% 80% no-repeat fixed;
 	
 	&__body {
 		max-width: 1410px;
