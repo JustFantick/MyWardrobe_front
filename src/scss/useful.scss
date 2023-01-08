@@ -11,6 +11,14 @@ $maxWidth: 1920; //верхнее пиковое знач на ширине эк
 	@return calc(#{$mbSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
 
+@function adaptValueDefine($pcSize, $mbSize, $paramWidth1, $paramWidth2) {
+	$addSize: $pcSize - $mbSize;
+	$width: $paramWidth1 - $paramWidth2;
+
+	//$paramWidth2 : $paramWidth2 + 'px';
+	@return calc(#{$mbSize + px} + #{$addSize} * ((100vw - #{$paramWidth2 + px}) / #{$width}));
+}
+
 //color vars
 
 //Buttons:

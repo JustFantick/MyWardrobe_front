@@ -1,5 +1,7 @@
 .item-description {
 	padding: 50px 0;
+	background: url('../img/tree_branch_left.png') 0 25% no-repeat fixed,
+			url('../img/tree_branch_right.png') 100% 80% no-repeat fixed;
 
 	&__title {
 		text-align: center;
@@ -19,7 +21,25 @@
 	}
 
 	&__slider {
-		flex: 1 1 adaptValue(690, 350);
+		//flex: 0 1 adaptValue(690, 350);
+		flex:  0 1 adaptValueDefine(690, 415, 1920, 	950);
+	}
+	&__description {
+		flex: 0 0 30%;
+	}
+
+	@media (max-width: 950px) {
+		&__body {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__slider {
+			flex: 0 1 auto;
+		}
+		&__description {
+			flex: 0 1 auto;
+		}
 	}
 }
 
@@ -63,7 +83,94 @@
 		display: flex;
 		gap: adaptValue(45, 20);
 	}
+
+	@media (max-width: 480px) {
+		&__amount-n-sizes {
+			align-self: center;
+		}
+
+		&__amount-n-sizes,
+		&__add-to-cart-btn,
+		&__price {
+			padding-left: 0;
+		}
+
+		&__add-to-cart-btn {
+			display: flex;
+			align-self: center;
+			align-items: center;
+			gap: 20px;
+		}
+	}
 }
+
+//slider
+.item-img-slider {
+	max-width: 100%;
+	max-height: 100%;	
+	padding: 0 adaptValue(63, 36) !important;
+
+	.swiper-slide {
+		max-width: adaptValue(550, 280px);
+		max-height: adaptValue(517, 250);
+		border-radius: 25px;
+		overflow: hidden;
+		
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media (max-width: 950px) {
+			//width: adaptValueDefine(550, 280, 950, 390);
+			height: adaptValueDefine(517, 250, 950, 390);
+
+			max-height: none;
+			max-width: none;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				width: auto;
+				border-radius: 25px;
+				overflow: hidden;
+				object-fit: contain;
+			}
+		}
+	}
+
+	.swiper-button-prev-custom, .swiper-button-next-custom {
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		z-index: 10;
+	}
+
+	.swiper-button-prev-custom {
+		left: 0;
+	}
+
+	.swiper-button-next-custom {
+		right: 0;
+		transform: translate(0,-50%) rotate(180deg);
+	}
+
+	//pagination
+	.swiper-pagination {
+		bottom: 3% !important;
+	}
+
+	.swiper-pagination-bullet {
+		transition: all 0.3s ease-in-out;
+		&-active {
+			background-color: #1e2832;
+			transform: scale(1.2);
+		}
+	}
+}
+//slider ends
 
 //Sections Amount & Sizes
 @mixin sectTextparams {
