@@ -1,0 +1,232 @@
+.making-order {
+	padding: 50px 0;
+	background: url('../img/tree_branch_left.png') 0 25% no-repeat fixed,
+	url('../img/tree_branch_right.png') 100% 80% no-repeat fixed;
+
+	&__title {
+		text-align: center;
+		margin-bottom: adaptValue(35, 25);
+	}
+	&__body {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 20px;
+
+		display: flex;
+		justify-content: center;
+		gap: adaptValue(50, 25);
+
+		@media (max-width: 740px) {
+			flex-direction: column;
+		}
+	}
+}
+
+.form-section-title {
+	font-family: robotoBold;
+	font-size: adaptValue(24, 20);
+	line-height: 1.5;
+	color: #000000;
+}
+
+.form {
+	&__order-details {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: adaptValue(50, 25);
+	}
+	
+	&__order-summary {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: adaptValue(50, 25);
+	}
+
+	@media (max-width: 740px) {
+		&__order-summary {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: adaptValue(50, 25);
+		}
+	}
+}
+
+.form-section {
+	width: adaptValue(463, 290);
+	padding: 20px adaptValue(25, 15) 25px adaptValue(25, 15);
+	background-color: #fff;
+	border-radius: 25px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+
+	&__item {
+		width: 100%;
+		font-size: adaptValue(20, 16);
+		line-height: 1.15;
+		color: #000000;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 5px;
+	}
+
+	&__capture {
+		font-family: robotoThin;
+		font-size: adaptValue(14, 10);
+		line-height: 1;
+		color: #000000;
+		margin-left: adaptValue(25, 15);
+	}
+
+	&__input {
+		background: #D9D9D9;
+		border: 1px solid #000000;
+		border-radius: 99px;
+		padding: adaptValue(12, 8) adaptValue(25, 15);
+		width: 100%;
+
+		font-size: adaptValue(16, 14);
+		line-height: 1;
+		color: #000000;
+
+		&.phone {			
+			padding: 0;
+			border: none;
+			background: none;
+			display: flex;
+			input {
+				max-width: 110px;
+				background: #D9D9D9;
+				border-top: 1px solid #000000;
+				border-bottom: 1px solid #000000;
+				border-right: 1px solid #000000;
+				border-radius: 0 99px 99px 0;
+				padding: adaptValue(12, 8) adaptValue(25, 15) adaptValue(12, 8) 5px;
+				
+				font-size: adaptValue(16, 14);
+				letter-spacing: 0.05em;
+				line-height: 1;
+				color: #000000;
+
+				&::placeholder {
+					letter-spacing: 0.05em;
+				}
+
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+			}
+
+			span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				font-size: adaptValue(16, 14);
+				line-height: 1;
+				color: rgba(0, 0, 0, 0.7);
+
+				background: #D9D9D9;
+				border-top: 1px solid #000000;
+				border-bottom: 1px solid #000000;
+				border-left: 1px solid #000000;
+				border-radius: 99px 0 0 99px;
+				padding: adaptValue(12, 8) 5px adaptValue(12, 8) adaptValue(25, 15);
+			}
+		}
+
+		&.region-index {
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			max-width: adaptValue(100, 73);
+		}
+	}
+}
+
+.order-summary {
+	max-width: 300px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	&>div {
+		padding-left: adaptValue(25, 15);
+		padding-right: adaptValue(25, 15);
+	}
+	background-color: #fff;
+	border-radius: 25px;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+
+	&>div:nth-child(2) {
+		padding-top: 0;
+	}
+
+	.order-summary-item {
+		width: 100%;
+		padding: 19px adaptValue(25, 15);
+		border-bottom: 1px solid #000000;
+		&__title {
+			font-size: adaptValue(20, 16);
+			line-height: 1.15;
+			color: #000000;
+			letter-spacing: 0.05em;
+		}
+
+		&__amount {
+			font-size: adaptValue(20, 16);
+			line-height: 1.15;
+			letter-spacing: 0.05em;
+			color: #5A5B6A;
+
+			span {
+				font-family: robotoBold;
+				color: #000000;
+			}
+		}
+
+		&__price {
+			font-family: robotoBold;
+			font-size: adaptValue(24, 18);
+			line-height: 1.16;
+			letter-spacing: 0.07em;
+			color: #000000;
+		}
+	}
+
+	&__total-cost {
+		width: 100%;
+		font-size: adaptValue(20, 16);
+		line-height: 1.16;
+		
+		color: #000000;
+		span {
+			font-family: robotoBold;
+		}
+	}
+
+	&__details {
+		font-family: robotoThin;
+		font-size: adaptValue(16, 12);
+		line-height: 1.1875;
+		color: #000000;
+	}
+}

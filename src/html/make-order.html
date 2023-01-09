@@ -1,0 +1,86 @@
+<section class="making-order">
+	<div class="making-order__title section-title">Making order</div>
+
+	<form class="making-order__body form">
+
+		<div class="form__order-details">
+			<div class="form-section">
+				<div class="form-section__title form-section-title">Contacts</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Name</div>
+					<input class="form-section__input" type="text">
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Surname</div>
+					<input class="form-section__input" type="text">
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Phone</div>
+					<div class="form-section__input phone">
+						<span>+380</span>
+						<input type="number" maxlength="9"
+							oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+					</div>
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">E-mail</div>
+					<input class="form-section__input" type="email">
+				</div>
+
+			</div>
+			<div class="form-section">
+				<div class="form-section__title form-section-title">Delivery</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Region</div>
+					<input class="form-section__input" type="text">
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">City</div>
+					<input class="form-section__input" type="text">
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Region index</div>
+					<input class="form-section__input region-index" type="number" maxlength="5"
+						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Department</div>
+					<input class="form-section__input" type="email">
+				</div>
+
+			</div>
+		</div>
+		<div class="form__order-summary">
+			<div class="order-summary">
+				<div class="order-summary__title form-section-title">Your order</div>
+
+				<div class="order-summary__item order-summary-item">
+					<div class="order-summary-item__title">Bobby pro 15’6 backpack</div>
+					<div class="order-summary-item__amount">Amount: <span>1</span></div>
+					<div class="order-summary-item__price">$300</div>
+				</div>
+
+				<div class="order-summary__total-cost">Total cost: <span>$300</span></div>
+				<div class="order-summary__details">Shipping cost will be determinded by the shipping company.</div>
+
+
+
+			</div>
+			<div class="button make-order-btn">Make order</div>
+
+		</div>
+
+
+
+	</form>
+
+</section>

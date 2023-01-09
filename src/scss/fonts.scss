@@ -13,6 +13,13 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: robotoThin;
+	font-display: swap;
+	src: url("../fonts/robotoThin.woff2") format("woff2"), url("../fonts/robotoThin.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
 	font-family: robotoMedium;
 	font-display: swap;
 	src: url("../fonts/robotoMedium.woff2") format("woff2"), url("../fonts/robotoMedium.woff") format("woff");

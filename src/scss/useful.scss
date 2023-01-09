@@ -8,14 +8,13 @@ $maxWidth: 1920; //верхнее пиковое знач на ширине эк
 	$maxWidth: $maxWidth - 390;
 
 	// if(vw > 1280px) {значение return будет равномерно увеличиваться сверх pcSize}
-	@return calc(#{$mbSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+	@return calc(#{$mbSize + px} + #{$addSize} * ((100vw - 390px) / #{$maxWidth}));
 }
 
 @function adaptValueDefine($pcSize, $mbSize, $paramWidth1, $paramWidth2) {
 	$addSize: $pcSize - $mbSize;
 	$width: $paramWidth1 - $paramWidth2;
 
-	//$paramWidth2 : $paramWidth2 + 'px';
 	@return calc(#{$mbSize + px} + #{$addSize} * ((100vw - #{$paramWidth2 + px}) / #{$width}));
 }
 

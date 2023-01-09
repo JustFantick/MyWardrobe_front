@@ -48,7 +48,10 @@ body {
 		}
 	}
 
-	.brands, .items-container, .item-description {
+	.brands, 
+	.items-container,
+	.item-description,
+	.making-order {
 		flex: 1 1 auto;
 	}
 }
@@ -64,3 +67,4 @@ body {
 @import "footer";
 @import "items";
 @import "item-description";
+@import "make-order";
