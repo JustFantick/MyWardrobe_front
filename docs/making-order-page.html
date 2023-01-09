@@ -6,8 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.min.css?_v=20230109202854">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230109202854" />
-	<title>Item</title>
+	<title>Making order</title>
 </head>
 
 <body>
@@ -101,58 +100,90 @@
 
 </header>
 
-		<section class="item-description">
-	<div class="item-description__title section-title">Bobby pro 15’6 backpack</div>
-	<div class="item-description__body">
+		<section class="making-order">
+	<div class="making-order__title section-title">Making order</div>
 
-		<!-- Slider main container -->
-		<div class="item-description__slider swiper item-img-slider">
-			<!-- Additional required wrapper -->
-			<div class="swiper-wrapper">
-				<!-- Slides -->
-				<div class="swiper-slide"><picture><source srcset="./img/item_img.webp" type="image/webp"><img src="./img/item_img.jpg" alt="slide1"></picture></div>
-				<div class="swiper-slide"><picture><source srcset="./img/item_img.webp" type="image/webp"><img src="./img/item_img.jpg" alt="slide1"></picture></div>
-				<div class="swiper-slide"><picture><source srcset="./img/item_img.webp" type="image/webp"><img src="./img/item_img.jpg" alt="slide1"></picture></div>
+	<form class="making-order__body form">
+
+		<div class="form__order-details">
+			<div class="form-section">
+				<div class="form-section__title form-section-title">Contacts</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Name</div>
+					<input class="form-section__input" type="text">
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Surname</div>
+					<input class="form-section__input" type="text">
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Phone</div>
+					<div class="form-section__input phone">
+						<span>+380</span>
+						<input type="number" maxlength="9"
+							oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+					</div>
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">E-mail</div>
+					<input class="form-section__input" type="email">
+				</div>
+
 			</div>
+			<div class="form-section">
+				<div class="form-section__title form-section-title">Delivery</div>
 
-			<img class="swiper-button-prev-custom slider_arrow_left" src="./img/icons/icons.svg#slider_arrow_left"
-				alt="slider_arrow_left">
-			<img class="swiper-button-next-custom slider_arrow_left" src="./img/icons/icons.svg#slider_arrow_left"
-				alt="slider_arrow_left">
+				<div class="form-section__item">
+					<div class="form-section__capture">Region</div>
+					<input class="form-section__input" type="text">
+				</div>
 
-			<div class="swiper-pagination"></div>
+				<div class="form-section__item">
+					<div class="form-section__capture">City</div>
+					<input class="form-section__input" type="text">
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Region index</div>
+					<input class="form-section__input region-index" type="number" maxlength="5"
+						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+
+				</div>
+
+				<div class="form-section__item">
+					<div class="form-section__capture">Department</div>
+					<input class="form-section__input" type="email">
+				</div>
+
+			</div>
+		</div>
+		<div class="form__order-summary">
+			<div class="order-summary">
+				<div class="order-summary__title form-section-title">Your order</div>
+
+				<div class="order-summary__item order-summary-item">
+					<div class="order-summary-item__title">Bobby pro 15’6 backpack</div>
+					<div class="order-summary-item__amount">Amount: <span>1</span></div>
+					<div class="order-summary-item__price">$300</div>
+				</div>
+
+				<div class="order-summary__total-cost">Total cost: <span>$300</span></div>
+				<div class="order-summary__details">Shipping cost will be determinded by the shipping company.</div>
+
+
+
+			</div>
+			<div class="button make-order-btn">Make order</div>
+
 		</div>
 
-		<div class="item-description__description description">
-			<div class="description__price">Price: <span>$300</span></div>
-			<div class="description__text">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-				dolore magna
-				aliqua. Ut enim ad minim veniam, quis nostrud
-			</div>
-			<div class="description__amount-n-sizes">
-				<div data-da=".description__add-to-cart-btn,480,first" class="amount">
-					<div class="amount__minus">—</div>
-					<div class="amount__number">1</div>
-					<div class="amount__plus">+</div>
-				</div>
-				<div class="sizes">
-					<div class="sizes__section">XS</div>
-					<div class="sizes__section active">S</div>
-					<div class="sizes__section">M</div>
-					<div class="sizes__section">L</div>
-					<div class="sizes__section">XL</div>
-					<div class="sizes__section">2XL</div>
-				</div>
-			</div>
 
-			<div class="description__add-to-cart-btn">
-				<div class="button">Add to my cart</div>
-			</div>
 
-		</div>
-
-	</div>
+	</form>
 
 </section>
 
@@ -169,24 +200,6 @@
 </footer>
 	</div>
 
-	<script type="module">
-		import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-
-		const swiper = new Swiper('.item-img-slider', {
-			speed: 300,
-			spaceBetween: 60,
-			loop: true,
-			autoHeight: true,
-			navigation: {
-				nextEl: '.swiper-button-next-custom',
-				prevEl: '.swiper-button-prev-custom',
-			},
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
-			},
-		});
-	</script>
 	<script src="js/app.min.js?_v=20230109202854"></script>
 </body>
 
