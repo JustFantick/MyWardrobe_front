@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230109202854">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230110211647">
 	<title>Making order</title>
 </head>
 
@@ -104,14 +104,13 @@
 	<div class="making-order__title section-title">Making order</div>
 
 	<form class="making-order__body form">
-
 		<div class="form__order-details">
 			<div class="form-section">
 				<div class="form-section__title form-section-title">Contacts</div>
 
 				<div class="form-section__item">
 					<div class="form-section__capture">Name</div>
-					<input class="form-section__input" type="text">
+					<input class="form-section__input _req" type="text">
 				</div>
 
 				<div class="form-section__item">
@@ -123,14 +122,14 @@
 					<div class="form-section__capture">Phone</div>
 					<div class="form-section__input phone">
 						<span>+380</span>
-						<input type="number" maxlength="9"
+						<input type="number" maxlength="9" class="_req _phone" placeholder="__ ___ ____"
 							oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 					</div>
 				</div>
 
 				<div class="form-section__item">
 					<div class="form-section__capture">E-mail</div>
-					<input class="form-section__input" type="email">
+					<input class="form-section__input _req _email" type="email">
 				</div>
 
 			</div>
@@ -139,24 +138,24 @@
 
 				<div class="form-section__item">
 					<div class="form-section__capture">Region</div>
-					<input class="form-section__input" type="text">
+					<input class="form-section__input _req" type="text">
 				</div>
 
 				<div class="form-section__item">
 					<div class="form-section__capture">City</div>
-					<input class="form-section__input" type="text">
+					<input class="form-section__input _req" type="text">
 				</div>
 
 				<div class="form-section__item">
-					<div class="form-section__capture">Region index</div>
-					<input class="form-section__input region-index" type="number" maxlength="5"
+					<div class="form-section__capture">Postcode</div>
+					<input class="form-section__input region-index _req" type="number" maxlength="5"
 						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 
 				</div>
 
 				<div class="form-section__item">
 					<div class="form-section__capture">Department</div>
-					<input class="form-section__input" type="email">
+					<input class="form-section__input _req" type="text">
 				</div>
 
 			</div>
@@ -174,17 +173,24 @@
 				<div class="order-summary__total-cost">Total cost: <span>$300</span></div>
 				<div class="order-summary__details">Shipping cost will be determinded by the shipping company.</div>
 
-
-
 			</div>
-			<div class="button make-order-btn">Make order</div>
+			<button type="submit" class="button make-order-btn">Make order
+		</div>
 
 		</div>
 
-
-
 	</form>
 
+	<div class="popup-order-succeed">
+		<div class="popup-order-succeed__body">
+			<p>Your order has been successfully created and accepted for processing.</p>
+			<p>Wait a message, we have sent to your email.</p>
+
+			<div class="button close-popup-btn">Close dialog</div>
+
+		</div>
+
+	</div>
 </section>
 
 		<footer class="footer">
@@ -200,7 +206,7 @@
 </footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20230109202854"></script>
+	<script src="js/app.min.js?_v=20230110211647"></script>
 </body>
 
 </html>
