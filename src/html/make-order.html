@@ -2,7 +2,6 @@
 	<div class="making-order__title section-title">Making order</div>
 
 	<form class="making-order__body form">
-
 		<div class="form__order-details">
 			<div class="form-section">
 				<div class="form-section__title form-section-title">Contacts</div>
@@ -46,7 +45,7 @@
 				</div>
 
 				<div class="form-section__item">
-					<div class="form-section__capture">Region index</div>
+					<div class="form-section__capture">Postcode</div>
 					<input class="form-section__input region-index" type="number" maxlength="5"
 						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 
@@ -79,8 +78,16 @@
 
 		</div>
 
-
-
 	</form>
 
+	<div class="popup-order-succeed">
+		<div class="popup-order-succeed__body">
+			<p>Your order has been successfully created and accepted for processing.</p>
+			<p>Wait a message, we have sent to your email.</p>
+
+			<div class="button close-popup-btn">Close dialog</div>
+
+		</div>
+
+	</div>
 </section>
