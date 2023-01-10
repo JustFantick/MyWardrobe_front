@@ -8,7 +8,7 @@
 
 				<div class="form-section__item">
 					<div class="form-section__capture">Name</div>
-					<input class="form-section__input" type="text">
+					<input class="form-section__input _req" type="text">
 				</div>
 
 				<div class="form-section__item">
@@ -20,14 +20,14 @@
 					<div class="form-section__capture">Phone</div>
 					<div class="form-section__input phone">
 						<span>+380</span>
-						<input type="number" maxlength="9"
+						<input type="number" maxlength="9" class="_req _phone" placeholder="__ ___ ____"
 							oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 					</div>
 				</div>
 
 				<div class="form-section__item">
 					<div class="form-section__capture">E-mail</div>
-					<input class="form-section__input" type="email">
+					<input class="form-section__input _req _email" type="email">
 				</div>
 
 			</div>
@@ -36,24 +36,24 @@
 
 				<div class="form-section__item">
 					<div class="form-section__capture">Region</div>
-					<input class="form-section__input" type="text">
+					<input class="form-section__input _req" type="text">
 				</div>
 
 				<div class="form-section__item">
 					<div class="form-section__capture">City</div>
-					<input class="form-section__input" type="text">
+					<input class="form-section__input _req" type="text">
 				</div>
 
 				<div class="form-section__item">
 					<div class="form-section__capture">Postcode</div>
-					<input class="form-section__input region-index" type="number" maxlength="5"
+					<input class="form-section__input region-index _req" type="number" maxlength="5"
 						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 
 				</div>
 
 				<div class="form-section__item">
 					<div class="form-section__capture">Department</div>
-					<input class="form-section__input" type="email">
+					<input class="form-section__input _req" type="text">
 				</div>
 
 			</div>
@@ -71,10 +71,9 @@
 				<div class="order-summary__total-cost">Total cost: <span>$300</span></div>
 				<div class="order-summary__details">Shipping cost will be determinded by the shipping company.</div>
 
-
-
 			</div>
-			<div class="button make-order-btn">Make order</div>
+			<button type="submit" class="button make-order-btn">Make order
+		</div>
 
 		</div>
 
