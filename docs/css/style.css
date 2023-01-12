@@ -1790,6 +1790,12 @@ body.lock {
   }
 }
 
+@media (min-width: 1440px) {
+  .main-slider .swiper-slide img {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1390px) {
   .header__body {
     -webkit-box-orient: horizontal;
