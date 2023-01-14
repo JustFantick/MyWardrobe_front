@@ -732,7 +732,8 @@ body.lock {
           align-items: center;
 }
 
-.main-slider .swiper-slide img {
+.main-slider .swiper-slide img,
+.main-slider .swiper-slide picture {
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1791,7 +1792,8 @@ body.lock {
 }
 
 @media (min-width: 1440px) {
-  .main-slider .swiper-slide img {
+  .main-slider .swiper-slide img,
+  .main-slider .swiper-slide picture {
     width: 100%;
   }
 }
