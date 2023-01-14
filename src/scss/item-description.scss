@@ -21,7 +21,6 @@
 	}
 
 	&__slider {
-		//flex: 0 1 adaptValue(690, 350);
 		flex:  0 1 adaptValueDefine(690, 415, 1920, 	950);
 	}
 	&__description {
@@ -123,7 +122,6 @@
 		}
 
 		@media (max-width: 950px) {
-			//width: adaptValueDefine(550, 280, 950, 390);
 			height: adaptValueDefine(517, 250, 950, 390);
 
 			max-height: none;
@@ -133,6 +131,8 @@
 			justify-content: center;
 			align-items: center;
 			img {
+				max-height: 500px;
+				width: auto;
 				border-radius: 25px;
 				overflow: hidden;
 				object-fit: contain;
