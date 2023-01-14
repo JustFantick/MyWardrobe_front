@@ -1977,6 +1977,13 @@ body.lock {
   }
 }
 
+@media (max-width: 950px) and (max-width: 465px) {
+  .item-img-slider .swiper-slide img,
+  .item-img-slider .swiper-slide picture {
+    width: 100%;
+  }
+}
+
 @media (max-width: 840px) {
   .items-container__container {
     -ms-grid-columns: (minmax(200px, 300px))[2];
