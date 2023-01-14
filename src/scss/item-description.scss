@@ -278,16 +278,9 @@ $padVertical: 8px;
 			border-left: 0px solid #000000;
 		}
 
-		&.active {
+		&.selected {
 			background-color: #5a5b6a;
 			color: #f1f1f1;
-		}
-		
-		@media (min-width: 768px) {
-			&:hover {
-				background-color: rgba(90, 91, 106, 0.8);
-				color: #f1f1f1;
-			}
 		}
 	}
 }
