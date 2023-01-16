@@ -1809,7 +1809,7 @@ body.lock {
   }
 }
 
-@media (max-width: 1390px) {
+@media (max-width: 1300px) {
   .header__body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
