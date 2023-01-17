@@ -114,11 +114,15 @@
 		max-height: adaptValue(517, 250);
 		border-radius: 25px;
 		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		
 		img {
-			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			border-radius: 25px;
+			object-fit: contain;
 		}
 
 		@media (max-width: 950px) {
@@ -174,6 +178,11 @@
 			transform: scale(1.2);
 		}
 	}
+}
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+	height: 100% !important;
 }
 //slider ends
 
