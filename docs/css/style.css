@@ -1221,7 +1221,8 @@ body.lock {
           align-items: center;
 }
 
-.item-img-slider .swiper-slide img {
+.item-img-slider .swiper-slide img,
+.item-img-slider .swiper-slide picture {
   height: 100%;
   border-radius: 25px;
   -o-object-fit: contain;
