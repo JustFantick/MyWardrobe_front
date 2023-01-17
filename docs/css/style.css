@@ -1210,13 +1210,22 @@ body.lock {
   max-height: calc(250px + 267 * ((100vw - 390px) / 1530));
   border-radius: 25px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .item-img-slider .swiper-slide img {
-  width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .item-img-slider .swiper-button-prev-custom,
@@ -1255,6 +1264,11 @@ body.lock {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: 100% !important;
 }
 
 .amount {
