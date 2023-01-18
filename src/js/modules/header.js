@@ -55,4 +55,39 @@ export function cartActivate() {
 		}
 	}
 
+	sizesGetWorked();
+	amountGetWorked();
+}
+
+function sizesGetWorked() {
+	const sizesList = document.querySelectorAll('.sizes-list');
+	sizesList.forEach(sizesLi => {
+		sizesLi.addEventListener('click', (event) => {
+			if (event.target.closest('.sizes-list__item')) {
+				let listItems = sizesLi.querySelectorAll('.sizes-list__item');
+				listItems.forEach(li => {
+					li.classList.remove('selected');
+				});
+				event.target.classList.add('selected');
+			}
+		});
+	});
+}
+
+function amountGetWorked() {
+	const amountList = document.querySelectorAll('.mycart-amount');
+	amountList.forEach(amountLi => {
+		amountLi.addEventListener('click', (event) => {
+			const amountBlock = amountLi.querySelector('.mycart-amount__number');
+			let amountNumber = parseInt(amountBlock.textContent);
+
+			if (event.target.closest('.mycart-amount__add')) {
+				if (amountNumber < 9) amountNumber++;
+				amountBlock.textContent = amountNumber;
+			} else if (event.target.closest('.mycart-amount__diff')) {
+				if (amountNumber > 1) amountNumber--;
+				amountBlock.textContent = amountNumber;
+			}
+		});
+	});
 }
