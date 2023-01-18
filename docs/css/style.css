@@ -638,7 +638,7 @@ body.lock {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.mycart-item__size .sizes-list__item.active {
+.mycart-item__size .sizes-list__item.selected {
   color: black;
 }
 
