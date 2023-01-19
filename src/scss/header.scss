@@ -488,4 +488,18 @@
 		letter-spacing: 0.07em;
 		color: #000000;
 	}
+
+	position: relative;
+	&__close-btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		cursor: pointer;
+		transform: translate(-25%,-25%);
+		padding: 7px;
+		border-radius: 50%;
+		border: 1px solid #000;
+		background-color: #fff;
+	}
 }
