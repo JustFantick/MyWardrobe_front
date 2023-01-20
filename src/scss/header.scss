@@ -2,7 +2,7 @@
 	padding: 25px 0px 5px 0;
 	background-color: rgba(24, 24, 24, 1);
 	box-shadow: 0px 0px 10px 20px rgba(24, 24, 24, 1);
-	
+
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -29,21 +29,23 @@
 		line-height: 1.16;
 		-webkit-text-stroke: 1px #D9D9D9;
 	}
+
 	h2 {
 		-webkit-text-stroke: 0.8px #D9D9D9;
 		font-size: adaptValue(28, 16);
-		line-height: 1;		
+		line-height: 1;
 		letter-spacing: 0.05em;
-		transform: translate(1%,25%);
+		transform: translate(1%, 25%);
 
 		position: relative;
+
 		&::before {
 			content: "";
 			position: absolute;
 			bottom: -3px;
 			left: 0;
 			width: 100%;
-			height: adaptValue(2.5,1);
+			height: adaptValue(2.5, 1);
 			background-color: #fff;
 			border-radius: 10px;
 		}
@@ -59,6 +61,7 @@
 		font-size: 16px;
 		line-height: 1;
 		color: #D9D9D9;
+
 		::placeholder {
 			font-size: 16px;
 			line-height: 1;
@@ -67,11 +70,12 @@
 	}
 
 	position: relative;
+
 	&__search-icon {
 		position: absolute;
 		left: 20px;
 		top: 50%;
-		transform: translate(0%,-45%);		
+		transform: translate(0%, -45%);
 	}
 
 	&__close-icon {
@@ -84,7 +88,7 @@
 
 .navigation {
 	display: flex;
-	
+
 	&__item {
 		white-space: nowrap;
 		font-size: adaptValue(24, 20);
@@ -94,12 +98,14 @@
 		padding-bottom: 5px;
 
 		margin-right: 30px;
+
 		&:last-child {
 			margin-right: 0;
 		}
 
 		//onHover effect
 		position: relative;
+
 		&::after {
 			content: '';
 			position: absolute;
@@ -113,7 +119,8 @@
 			transition: all 0.2s ease-in;
 		}
 
-		&:hover, &.active {
+		&:hover,
+		&.active {
 			&::after {
 				width: 100%;
 			}
@@ -134,7 +141,7 @@
 	}
 
 	&__text {
-		white-space:nowrap;
+		white-space: nowrap;
 		margin-left: 10px;
 		@include btnTextParams;
 	}
@@ -169,8 +176,8 @@
 		background-color: rgba(0, 0, 0, 0.8);
 
 		top: 0;
-		transform: translate(0,-100%);
-		
+		transform: translate(0, -100%);
+
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -182,7 +189,7 @@
 		}
 
 		&.active {
-			transform: translate(0,0);
+			transform: translate(0, 0);
 		}
 	}
 
@@ -196,7 +203,9 @@
 		height: 20px;
 		width: 35px;
 
-		&__top, &__center, &__bottom {
+		&__top,
+		&__center,
+		&__bottom {
 			transition: all 0.3s ease-in-out;
 			position: absolute;
 			right: 0;
@@ -209,9 +218,11 @@
 		&__top {
 			top: 0;
 		}
+
 		&__bottom {
 			bottom: 0;
 		}
+
 		&__center {
 			top: 50%;
 			transform: translate(0, -50%);
@@ -232,7 +243,8 @@
 	}
 }
 
-.search_mb, .mycart_mb {
+.search_mb,
+.mycart_mb {
 	display: none;
 }
 
@@ -242,7 +254,7 @@
 		top: 0;
 		right: 0;
 		transition: all 0.3s ease-in-out;
-		
+
 		.searchbar {
 			transition: all 0.3s ease-in-out;
 			opacity: 1;
@@ -271,6 +283,7 @@
 	.mycart {
 		display: none;
 	}
+
 	.mycart_mb {
 		display: block;
 	}
@@ -291,11 +304,11 @@
 		z-index: 110;
 
 		.mycart-popup__content {
-			transform: translate(0,0);
+			transform: translate(0, 0);
 		}
 	}
 
-	min-height: 100vh;
+	height: 100vh;
 	width: 100%;
 	overflow-x: hidden;
 	background-color: rgba(0, 0, 0, 0.7);
@@ -306,7 +319,7 @@
 
 	&__content {
 		transition: all 0.3s ease-in-out;
-		transform: translate(100%,0);
+		transform: translate(100%, 0);
 		flex: 1 1 auto;
 		position: relative;
 		z-index: 101;
@@ -315,6 +328,7 @@
 
 
 	$horizontPad: adaptValue(51, 20);
+
 	&__goback {
 		cursor: pointer;
 		padding: 56px $horizontPad 30px $horizontPad;
@@ -331,6 +345,7 @@
 			letter-spacing: 0.0075em;
 			color: #000000;
 		}
+
 		img {
 			height: adaptValue(41, 33.6);
 		}
@@ -344,6 +359,10 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		>div {
+			margin-top: 12px;
+		}
 	}
 
 	&__items-title {
@@ -352,8 +371,6 @@
 		line-height: 1.5;
 		letter-spacing: 0.0075em;
 		color: #000000;
-
-		margin-bottom: 12px;
 	}
 
 	&__summary {
@@ -400,6 +417,7 @@
 		display: flex;
 		align-items: center;
 		gap: 15px;
+
 		p {
 			font-size: adaptValue(18, 16);
 			line-height: 1.15;
@@ -410,7 +428,7 @@
 		.sizes-list {
 			display: flex;
 			gap: 15px;
-		
+
 			&__item {
 				font-family: robotoMedium;
 				transition: all 0.3s ease-in-out;
@@ -419,7 +437,7 @@
 				line-height: 1.15;
 				letter-spacing: 0.05em;
 				color: rgba(0, 0, 0, 0.6);
-		
+
 				&.selected {
 					color: black;
 				}
@@ -438,7 +456,7 @@
 		font-size: adaptValue(18, 16);
 		line-height: 1.15;
 		letter-spacing: 0.05em;
-		
+
 		&__text {
 			color: #5A5B6A;
 
@@ -449,7 +467,8 @@
 			margin-right: 20px;
 		}
 
-		&__number, &__change-number  {
+		&__number,
+		&__change-number {
 			font-family: robotoBold;
 			color: black;
 		}
@@ -460,12 +479,13 @@
 			gap: 10px;
 
 			position: relative;
+
 			&::before {
 				content: '';
 				position: absolute;
 				top: 50%;
 				left: -10px;
-				transform: translate(-50%,-50%);
+				transform: translate(-50%, -50%);
 
 				height: 90%;
 				width: 2px;
@@ -473,7 +493,8 @@
 			}
 		}
 
-		&__add, &__diff {
+		&__add,
+		&__diff {
 			cursor: pointer;
 		}
 	}
@@ -490,13 +511,14 @@
 	}
 
 	position: relative;
+
 	&__close-btn {
 		position: absolute;
 		top: 0;
 		left: 0;
 
 		cursor: pointer;
-		transform: translate(-25%,-25%);
+		transform: translate(-25%, -25%);
 		padding: 7px;
 		border-radius: 50%;
 		border: 1px solid #000;

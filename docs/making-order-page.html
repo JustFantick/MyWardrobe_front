@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230118114536">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230120194946">
 	<title>Making order</title>
 </head>
 
@@ -20,34 +20,42 @@
 			</div>
 			<div class="mycart-popup__items-list">
 				<h3 class="mycart-popup__items-title">Your cart</h3>
-				<div class="mycart-item">
-					<div class="mycart-item__name">Bobby pro 15’6 backpack</div>
-					<div class="mycart-item__size">
-						<p>Size:</p>
-						<ul class="sizes-list">
-							<li class="sizes-list__item">XS</li>
-							<li class="sizes-list__item">S</li>
-							<li class="sizes-list__item">M</li>
-							<li class="sizes-list__item">L</li>
-							<li class="sizes-list__item">XL</li>
-							<li class="sizes-list__item">2XL</li>
-						</ul>
-					</div>
-					<div class="mycart-item__amount mycart-amount">
-						<div class="mycart-amount__text">Amount: </div>
-						<div class="mycart-amount__number">1</div>
-						<div class="mycart-amount__change-number">
-							<div class="mycart-amount__add">+</div>
-							<div class="mycart-amount__diff">—</div>
+
+				<template id="cartItemTempl">
+					<div class="mycart-item">
+						<div class="mycart-item__close-btn">
+							<img class="close_icon" src="./img/icons/icons.svg#close_icon" alt="close_icon">
+
 						</div>
 
+						<div class="mycart-item__name"></div>
+						<div class="mycart-item__size">
+							<p>Size:</p>
+							<ul class="sizes-list">
+								<li class="sizes-list__item">XS</li>
+								<li class="sizes-list__item">S</li>
+								<li class="sizes-list__item">M</li>
+								<li class="sizes-list__item">L</li>
+								<li class="sizes-list__item">XL</li>
+								<li class="sizes-list__item">2XL</li>
+							</ul>
+						</div>
+						<div class="mycart-item__amount mycart-amount">
+							<div class="mycart-amount__text">Amount: </div>
+							<div class="mycart-amount__number">1</div>
+							<div class="mycart-amount__change-number">
+								<div class="mycart-amount__add">+</div>
+								<div class="mycart-amount__diff">—</div>
+							</div>
+
+						</div>
+						<div class="mycart-item__price"></div>
 					</div>
-					<div class="mycart-item__price">$300</div>
-				</div>
+				</template>
 
 			</div>
 			<div class="mycart-popup__summary">
-				<div class="mycart-popup__sum">Total cost: <span>$300</span></div>
+				<div class="mycart-popup__sum">Total cost: <span>$0</span></div>
 				<a href="./making-order-page.html" class="button make-order">Make order</a>
 			</div>
 
@@ -204,7 +212,7 @@
 </footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20230118114536"></script>
+	<script src="js/app.min.js?_v=20230120194946"></script>
 </body>
 
 </html>

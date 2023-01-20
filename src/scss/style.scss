@@ -9,18 +9,22 @@ body {
 	background-color: #f1f1f1;
 
 	overflow: auto;
+
 	&.lock {
 		overflow: hidden;
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+
 	// custom scrollBar
 	::-webkit-scrollbar {
 		width: 3px;
+
 		&-track {
 			background: #181818;
 		}
+
 		&-thumb {
 			background: #f1f1f1;
 		}
@@ -48,13 +52,14 @@ body {
 		}
 	}
 
-	.brands, 
+	.brands,
 	.items-container,
 	.item-description,
 	.making-order {
 		flex: 1 1 auto;
 	}
 }
+
 .container {
 	max-width: 1793px;
 	margin: 0 auto;
