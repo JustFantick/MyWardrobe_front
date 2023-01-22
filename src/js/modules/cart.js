@@ -1,35 +1,68 @@
 export function getCartWorked() {
-	let itemsList = [];//list of cart-items
+	let itemsList = [];
 
-	const addToCartBtn = document.querySelector('.description__add-to-cart-btn .button');
 
-	addToCartBtn.onclick = () => {
-		let title = document.querySelector('.item-description__title').textContent;
-		let size = document.querySelector('.sizes__section.selected').textContent;
-		let amount = parseInt(document.querySelector('.amount__number').textContent);
-		let price = parseInt(document.querySelector('.description__price span').textContent.slice(1));
+	//check existence in localStorage
+	if (localStorage.getItem('itemsList')) {
+		let raw = JSON.parse(localStorage.getItem('itemsList'));
 
-		let item = {
-			"title": title,//text
-			"size": size,//text
-			"amount": amount,//int
-			"price": price,//int
-		};
+		let n = 0;
+		raw.forEach(item => {
+			itemsList[n] = item;
+			n++;
+		});
+		console.log(itemsList);
 
-		addCartItem(item);
-		itemsList.push(item);
-
+		itemsList.forEach(listItem => addCartItem(listItem, itemsList.indexOf(listItem)));
 		updateTotalCost();
-	};
+	} else console.log('There`s no items in LocalStorage');
 
+	//on item-description page activate 'adding cart'
+	if (document.querySelector('.description__add-to-cart-btn .button')) {
+		addCartListener();
+	}
 
-	function addCartItem(item) {
+	//upload 'itemsList' to LocalStorage onWindowClose
+	window.onbeforeunload = () => localStorage.setItem('itemsList', JSON.stringify(itemsList));
+
+	function addCartListener() {
+		const addToCartBtn = document.querySelector('.description__add-to-cart-btn .button');
+
+		addToCartBtn.onclick = () => {
+			let title = document.querySelector('.item-description__title').textContent;
+			let size = document.querySelector('.sizes__section.selected').textContent;
+			let amount = parseInt(document.querySelector('.amount__number').textContent);
+			let price = parseInt(document.querySelector('.description__price span').textContent.slice(1));
+
+			let item = {
+				"title": title,//text
+				"size": size,//text
+				"amount": amount,//int
+				"price": price,//int
+			};
+
+			if (!itemsList.find(e => e.title === title)) {
+				addCartItem(item, itemsList.length);
+				itemsList.push(item);
+				updateTotalCost();
+			} else {
+				// let btn = document.querySelector('.description__add-to-cart-btn div');
+				// btn.classList.add('warning');
+
+				// window.addEventListener('click', () => {
+				// 	btn.classList.remove('warning');
+				// }, { once: true });
+			}
+		};
+	}
+
+	function addCartItem(item, index) {
 		const insertItemTmp = cartItemTempl.content.cloneNode(true);
 		const itemsContainer = document.querySelector('.mycart-popup__items-list');
 
 		//set atribute 'index' to item`s container
 		const insertingBlock = insertItemTmp.querySelector('.mycart-item');
-		insertingBlock.setAttribute('index', itemsList.length);
+		insertingBlock.setAttribute('index', index);
 
 		//deleteBtn onClickListener
 		insertItemTmp.querySelector('.mycart-item__close-btn').onclick = () => {
@@ -57,6 +90,7 @@ export function getCartWorked() {
 	function removeCartItem(itemContainer) {
 		//delete from ItemsList
 		itemsList.splice(itemContainer.getAttribute('index'), 1);
+		console.log(itemsList);
 		//delete from html
 		itemContainer.remove();
 
@@ -106,7 +140,6 @@ export function getCartWorked() {
 			}
 		}
 	}
-
 	function updateTotalCost() {
 		let totalCost = 0;
 		itemsList.forEach(item => totalCost += item.price * item.amount);

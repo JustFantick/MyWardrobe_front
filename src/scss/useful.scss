@@ -27,11 +27,13 @@ $btnPadTop: 10px;
 	border: 1.5px solid #D9D9D9;
 	border-radius: 99px;
 }
+
 @mixin btnTextParams {
 	font-family: robotoMedium;
 	letter-spacing: 0.0075em;
 	color: #D9D9D9;
 }
+
 //usage
 //@include btnBorderParams;
 
@@ -52,16 +54,23 @@ $btnPadTop: 10px;
 	color: #000000;
 	cursor: pointer;
 
-	&:hover {
-		color: #E4E4E4;
+	@media (min-width: 768px) {
+		&:hover {
+			color: #E4E4E4;
+			background-color: #000;
+			border: 2px solid #E4E4E4;
+		}
+	}
+
+	&.warning {
 		background-color: #000;
-		border: 2px solid #E4E4E4;
+		color: #D9D9D9;
 	}
 }
 
 .section-title {
 	font-family: robotoBold;
 	font-size: adaptValue(36, 28);
-	line-height: 1.5;	
+	line-height: 1.5;
 	color: #000000;
 }
