@@ -4,7 +4,7 @@ export function formValidationActivate() {
 	let form = document.querySelector('form');
 
 	//popup vars
-	const popup = document.querySelector('.popup-order-succeed');
+	const popup = document.querySelector('.message-popup');
 	const popupOpenBtn = document.querySelector('.make-order-btn');
 	const body = document.querySelector('body');
 

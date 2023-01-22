@@ -1,12 +1,13 @@
 .making-order {
 	padding: 50px 0;
 	background: url('../img/tree_branch_left.png') 0 25% no-repeat fixed,
-	url('../img/tree_branch_right.png') 100% 80% no-repeat fixed;
+		url('../img/tree_branch_right.png') 100% 80% no-repeat fixed;
 
 	&__title {
 		text-align: center;
 		margin-bottom: adaptValue(35, 25);
 	}
+
 	&__body {
 		max-width: 900px;
 		margin: 0 auto;
@@ -37,7 +38,7 @@
 		align-items: center;
 		gap: adaptValue(50, 25);
 	}
-	
+
 	&__order-summary {
 		display: flex;
 		flex-direction: column;
@@ -100,11 +101,12 @@
 		line-height: 1;
 		color: #000000;
 
-		&.phone {			
+		&.phone {
 			padding: 0;
 			border: none;
 			background: none;
 			display: flex;
+
 			input {
 				max-width: 110px;
 				background: #D9D9D9;
@@ -113,7 +115,7 @@
 				border-right: 1px solid #000000;
 				border-radius: 0 99px 99px 0;
 				padding: adaptValue(12, 8) adaptValue(25, 15) adaptValue(12, 8) 5px;
-				
+
 				font-size: adaptValue(16, 14);
 				letter-spacing: 0.05em;
 				line-height: 1;
@@ -146,18 +148,21 @@
 				border-radius: 99px 0 0 99px;
 				padding: adaptValue(12, 8) 5px adaptValue(12, 8) adaptValue(25, 15);
 			}
-			
-			&._error input, &._error span {
+
+			&._error input,
+			&._error span {
 				border-color: red;
 			}
 		}
 
 		&.region-index {
+
 			&::-webkit-outer-spin-button,
 			&::-webkit-inner-spin-button {
 				-webkit-appearance: none;
 				margin: 0;
 			}
+
 			max-width: adaptValue(100, 73);
 		}
 
@@ -171,13 +176,15 @@
 	max-width: 300px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+
 	&>div {
 		padding-left: adaptValue(25, 15);
 		padding-right: adaptValue(25, 15);
 	}
+
 	background-color: #fff;
 	border-radius: 25px;
-	
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -231,8 +238,9 @@
 		width: 100%;
 		font-size: adaptValue(20, 16);
 		line-height: 1.16;
-		
+
 		color: #000000;
+
 		span {
 			font-family: robotoBold;
 		}
@@ -247,9 +255,9 @@
 }
 
 //Popup "successful order"
-.popup-order-succeed {
+.message-popup {
 	transition: all 0.5s ease-in-out;
-	
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -278,7 +286,7 @@
 		p {
 			text-align: justify;
 			font-size: adaptValue(22, 16);
-			line-height: 1.5;			
+			line-height: 1.5;
 			color: #000000;
 
 			margin-top: adaptValue(15, 7);
@@ -287,6 +295,7 @@
 				padding-left: adaptValue(15, 13);
 			}
 		}
+
 		& p:first-child {
 			margin-top: 0;
 		}
@@ -309,7 +318,7 @@
 		visibility: visible;
 		opacity: 1;
 
-		.popup-order-succeed__body {
+		.message-popup__body {
 			opacity: 1;
 			transform: scale(1);
 		}

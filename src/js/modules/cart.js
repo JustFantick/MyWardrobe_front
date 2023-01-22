@@ -46,12 +46,16 @@ export function getCartWorked() {
 				itemsList.push(item);
 				updateTotalCost();
 			} else {
-				// let btn = document.querySelector('.description__add-to-cart-btn div');
-				// btn.classList.add('warning');
+				const popup = document.querySelector('.message-popup');
+				const body = document.querySelector('body');
 
-				// window.addEventListener('click', () => {
-				// 	btn.classList.remove('warning');
-				// }, { once: true });
+				popup.classList.add('active');
+				body.classList.add('lock');
+
+				popup.addEventListener('click', (e) => {
+					popup.classList.remove('active');
+					body.classList.remove('lock');
+				});
 			}
 		};
 	}
