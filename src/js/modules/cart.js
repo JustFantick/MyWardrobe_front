@@ -26,10 +26,17 @@ export function getCartWorked() {
 
 			//insert title
 			insertItemTmp.querySelector('.order-summary-item__title').textContent = listItem.title;
-			//insert size
-			insertItemTmp.querySelector('.order-summary-item__size span').textContent = listItem.size;
+
+			if (listItem.size) {
+				//insert size
+				insertItemTmp.querySelector('.order-summary-item__size span').textContent = listItem.size;
+			} else {
+				insertItemTmp.querySelector('.order-summary-item__size').remove();
+			}
+
 			//insert amount
 			insertItemTmp.querySelector('.order-summary-item__amount span').textContent = listItem.amount;
+
 			//insert price
 			insertItemTmp.querySelector('.order-summary-item__price').textContent = '$' + listItem.price;
 
@@ -53,19 +60,17 @@ export function getCartWorked() {
 		const addToCartBtn = document.querySelector('.description__add-to-cart-btn .button');
 
 		addToCartBtn.onclick = () => {
-			let title = document.querySelector('.item-description__title').textContent;
-			let size = document.querySelector('.sizes__section.selected').textContent;
-			let amount = parseInt(document.querySelector('.amount__number').textContent);
-			let price = parseInt(document.querySelector('.description__price span').textContent.slice(1));
+			let item = new Object();
 
-			let item = {
-				"title": title,//text
-				"size": size,//text
-				"amount": amount,//int
-				"price": price,//int
-			};
+			item.title = document.querySelector('.item-description__title').textContent;
+			item.amount = parseInt(document.querySelector('.amount__number').textContent);
+			item.price = parseInt(document.querySelector('.description__price span').textContent.slice(1));
 
-			if (!itemsList.find(e => e.title === title)) {
+			if (document.querySelector('.sizes')) {
+				item.size = document.querySelector('.sizes__section.selected').textContent;
+			}
+
+			if (!itemsList.find(e => e.title === item.title)) {
 				addCartItem(item, itemsList.length);
 				itemsList.push(item);
 				updateTotalCost();
@@ -81,6 +86,8 @@ export function getCartWorked() {
 					body.classList.remove('lock');
 				});
 			}
+
+			console.log(item);
 		};
 	}
 
@@ -99,17 +106,25 @@ export function getCartWorked() {
 
 		//insert title
 		insertItemTmp.querySelector('.mycart-item__name').textContent = item.title;
-		//insert size
-		let listItems = insertItemTmp.querySelectorAll('.sizes-list__item');
-		listItems.forEach(li => {
-			if (li.textContent == item.size) li.classList.add('selected');
-		});
+
+
+		if (item.size) {
+			//insert size
+			let listItems = insertItemTmp.querySelectorAll('.sizes-list__item');
+			listItems.forEach(li => {
+				if (li.textContent == item.size) li.classList.add('selected');
+			});
+
+			sizesGetWorked(insertItemTmp);
+		} else {
+			insertItemTmp.querySelector('.mycart-item__size').remove();
+		}
+
 		//insert amount
 		insertItemTmp.querySelector('.mycart-amount__number').textContent = item.amount;
 		//insert price
 		insertItemTmp.querySelector('.mycart-item__price').textContent = '$' + item.price;
 
-		sizesGetWorked(insertItemTmp);
 		amountGetWorked(insertItemTmp);
 
 		itemsContainer.append(insertItemTmp);
