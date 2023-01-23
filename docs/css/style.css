@@ -1285,11 +1285,6 @@ body.lock {
           transform: scale(1.2);
 }
 
-.swiper-autoheight,
-.swiper-autoheight .swiper-slide {
-  height: 100% !important;
-}
-
 .amount {
   border-radius: 90px;
   overflow: hidden;
