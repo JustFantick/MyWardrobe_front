@@ -1,7 +1,6 @@
 export function getCartWorked() {
 	let itemsList = [];
 
-
 	//check existence in localStorage
 	if (localStorage.getItem('itemsList')) {
 		let raw = JSON.parse(localStorage.getItem('itemsList'));
@@ -12,10 +11,35 @@ export function getCartWorked() {
 			n++;
 		});
 		console.log(itemsList);
-
-		itemsList.forEach(listItem => addCartItem(listItem, itemsList.indexOf(listItem)));
-		updateTotalCost();
 	} else console.log('There`s no items in LocalStorage');
+
+	//insert items to cart
+	itemsList.forEach(listItem => addCartItem(listItem, itemsList.indexOf(listItem)));
+	updateTotalCost();
+
+	//on making-order page insert items to 'order-list'
+	if (document.querySelector('.making-order')) {
+		let sum = 0;
+		itemsList.forEach(listItem => {
+			const insertItemTmp = orderItemTempl.content.cloneNode(true);
+			const itemsContainer = document.querySelector('.order-summary__items-container');
+
+			//insert title
+			insertItemTmp.querySelector('.order-summary-item__title').textContent = listItem.title;
+			//insert size
+			insertItemTmp.querySelector('.order-summary-item__size span').textContent = listItem.size;
+			//insert amount
+			insertItemTmp.querySelector('.order-summary-item__amount span').textContent = listItem.amount;
+			//insert price
+			insertItemTmp.querySelector('.order-summary-item__price').textContent = '$' + listItem.price;
+
+			sum += listItem.price * listItem.amount;
+
+			itemsContainer.append(insertItemTmp);
+		});
+
+		document.querySelector('.order-summary__total-cost span').textContent = '$' + sum;
+	}
 
 	//on item-description page activate 'adding cart'
 	if (document.querySelector('.description__add-to-cart-btn .button')) {

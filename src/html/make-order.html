@@ -62,13 +62,20 @@
 			<div class="order-summary">
 				<div class="order-summary__title form-section-title">Your order</div>
 
-				<div class="order-summary__item order-summary-item">
-					<div class="order-summary-item__title">Bobby pro 15’6 backpack</div>
-					<div class="order-summary-item__amount">Amount: <span>1</span></div>
-					<div class="order-summary-item__price">$300</div>
+				<div class="order-summary__items-container">
+					<template id="orderItemTempl">
+						<div class="order-summary-item">
+							<div class="order-summary-item__title"></div>
+							<div class="order-summary-item__amount-n-sizes">
+								<div class="order-summary-item__amount">Amount: <span></span></div>
+								<div class="order-summary-item__size">Size: <span></span></div>
+							</div>
+							<div class="order-summary-item__price"></div>
+						</div>
+					</template>
 				</div>
 
-				<div class="order-summary__total-cost">Total cost: <span>$300</span></div>
+				<div class="order-summary__total-cost">Total cost: <span></span></div>
 				<div class="order-summary__details">Shipping cost will be determinded by the shipping company.</div>
 
 			</div>

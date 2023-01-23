@@ -177,11 +177,6 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 
-	&>div {
-		padding-left: adaptValue(25, 15);
-		padding-right: adaptValue(25, 15);
-	}
-
 	background-color: #fff;
 	border-radius: 25px;
 
@@ -189,15 +184,45 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 20px;
 
-	&>div:nth-child(2) {
-		padding-top: 0;
+	@mixin padHorizontal {
+		padding-left: adaptValue(25, 15);
+		padding-right: adaptValue(25, 15);
 	}
 
+	&__items-container {
+		width: 100%;
+	}
+
+	&__total-cost {
+		width: 100%;
+		@include padHorizontal();
+		font-size: adaptValue(20, 16);
+		line-height: 1.16;
+
+		margin-top: 20px;
+		color: #000000;
+
+		span {
+			font-family: robotoBold;
+		}
+	}
+
+	&__details {
+		@include padHorizontal();
+
+		font-family: robotoThin;
+		font-size: adaptValue(16, 12);
+		line-height: 1.1875;
+		color: #000000;
+
+		margin-top: 20px;
+	}
+
+	//order-item
 	.order-summary-item {
 		width: 100%;
-		padding: 19px adaptValue(25, 15);
+		padding: adaptValue(20, 15) adaptValue(25, 15);
 		border-bottom: 1px solid #000000;
 
 		display: flex;
@@ -207,50 +232,39 @@
 		gap: adaptValue(10, 5);
 
 		&__title {
-			font-size: adaptValue(20, 16);
+			font-size: adaptValue(18, 16);
 			line-height: 1.15;
 			color: #000000;
 			letter-spacing: 0.05em;
 		}
 
-		&__amount {
-			font-size: adaptValue(20, 16);
+		&__amount-n-sizes {
+			display: flex;
+			gap: adaptValue(20, 10);
+		}
+
+		&__amount,
+		&__size {
+			font-size: adaptValue(18, 16);
 			line-height: 1.15;
 			letter-spacing: 0.05em;
 			color: #5A5B6A;
 
 			span {
 				font-family: robotoBold;
+				text-transform: uppercase;
+				font-size: adaptValue(16, 14);
 				color: #000000;
 			}
 		}
 
 		&__price {
 			font-family: robotoBold;
-			font-size: adaptValue(24, 18);
+			font-size: adaptValue(20, 18);
 			line-height: 1.16;
 			letter-spacing: 0.07em;
 			color: #000000;
 		}
-	}
-
-	&__total-cost {
-		width: 100%;
-		font-size: adaptValue(20, 16);
-		line-height: 1.16;
-
-		color: #000000;
-
-		span {
-			font-family: robotoBold;
-		}
-	}
-
-	&__details {
-		font-family: robotoThin;
-		font-size: adaptValue(16, 12);
-		line-height: 1.1875;
-		color: #000000;
 	}
 }
 
