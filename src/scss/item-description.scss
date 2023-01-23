@@ -1,7 +1,7 @@
 .item-description {
 	padding: 50px 0;
 	background: url('../img/tree_branch_left.png') 0 25% no-repeat fixed,
-			url('../img/tree_branch_right.png') 100% 80% no-repeat fixed;
+		url('../img/tree_branch_right.png') 100% 80% no-repeat fixed;
 
 	&__title {
 		text-align: center;
@@ -21,8 +21,9 @@
 	}
 
 	&__slider {
-		flex:  0 1 adaptValueDefine(690, 415, 1920, 	950);
+		flex: 0 1 adaptValueDefine(690, 415, 1920, 950);
 	}
+
 	&__description {
 		flex: 0 0 30%;
 	}
@@ -36,6 +37,7 @@
 		&__slider {
 			flex: 0 1 auto;
 		}
+
 		&__description {
 			flex: 0 1 auto;
 		}
@@ -53,8 +55,9 @@
 
 	&__price {
 		font-size: adaptValue(32, 24);
-		line-height: 1.18;		
+		line-height: 1.18;
 		color: #000000;
+
 		span {
 			font-family: robotoBold;
 			letter-spacing: 0.03em;
@@ -62,6 +65,7 @@
 	}
 
 	$paddingLeft: 20px;
+
 	&__amount-n-sizes,
 	&__add-to-cart-btn,
 	&__price {
@@ -70,7 +74,7 @@
 
 	&__text {
 		font-size: adaptValue(24, 16);
-		line-height: 1.7;		
+		line-height: 1.7;
 		color: #000000;
 
 		&::first-letter {
@@ -105,7 +109,7 @@
 //slider
 .item-img-slider {
 	max-width: 100%;
-	max-height: 100%;	
+	max-height: 100%;
 	margin: 0 !important;
 	padding: 0 adaptValue(63, 36) !important;
 
@@ -118,8 +122,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		
-		img, picture {
+
+		img,
+		picture {
 			height: 100%;
 			border-radius: 25px;
 			object-fit: contain;
@@ -134,6 +139,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			img {
 				max-height: 500px;
 				width: auto;
@@ -143,18 +149,21 @@
 			}
 
 			@media (max-width: 465px) {
-				img, picture {
+
+				img,
+				picture {
 					width: 100%;
 				}
 			}
 		}
 	}
-	
+
 	//slider navigation
-	.swiper-button-prev-custom, .swiper-button-next-custom {
+	.swiper-button-prev-custom,
+	.swiper-button-next-custom {
 		position: absolute;
 		top: 50%;
-		transform: translate(0,-50%);
+		transform: translate(0, -50%);
 		z-index: 10;
 	}
 
@@ -164,15 +173,17 @@
 
 	.swiper-button-next-custom {
 		right: 0;
-		transform: translate(0,-50%) rotate(180deg);
+		transform: translate(0, -50%) rotate(180deg);
 	}
 
 	//slider pagination
 	.swiper-pagination {
-		bottom: 3% !important;
+		//bottom: 3% !important;
 	}
+
 	.swiper-pagination-bullet {
 		transition: all 0.3s ease-in-out;
+
 		&-active {
 			background-color: #1e2832;
 			transform: scale(1.2);
@@ -184,6 +195,7 @@
 .swiper-autoheight .swiper-slide {
 	height: 100% !important;
 }
+
 //slider ends
 
 //Sections Amount & Sizes
@@ -194,6 +206,7 @@
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 }
+
 $padOutSide: 13px;
 $padInSide: 8px;
 $padVertical: 8px;
@@ -203,6 +216,7 @@ $padVertical: 8px;
 	overflow: hidden;
 	display: flex;
 	position: relative;
+
 	&::after {
 		content: '';
 		position: absolute;
@@ -218,21 +232,23 @@ $padVertical: 8px;
 	//border between sections
 	& div {
 		border-left: 2px solid #000000;
+
 		&:first-child {
 			border-left: 0px solid #000000;
 		}
 	}
-	
-	&__minus, &__plus {
+
+	&__minus,
+	&__plus {
 		@include sectTextparams();
-		
+
 		display: inline-block;
 		padding-top: $padVertical;
 		padding-bottom: $padVertical;
 
 		cursor: pointer;
 	}
-	
+
 	&__minus {
 		padding-left: $padOutSide;
 		padding-right: $padInSide;
@@ -259,6 +275,7 @@ $padVertical: 8px;
 	display: flex;
 
 	position: relative;
+
 	&::after {
 		content: '';
 		position: absolute;
@@ -270,7 +287,7 @@ $padVertical: 8px;
 		border-radius: 90px;
 		z-index: -1;
 	}
-	
+
 	&__section {
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
@@ -289,6 +306,7 @@ $padVertical: 8px;
 
 		//border between sections
 		border-left: 2px solid #000000;
+
 		&:first-child {
 			border-left: 0px solid #000000;
 		}

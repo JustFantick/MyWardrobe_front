@@ -1268,10 +1268,6 @@ body.lock {
           transform: translate(0, -50%) rotate(180deg);
 }
 
-.item-img-slider .swiper-pagination {
-  bottom: 3% !important;
-}
-
 .item-img-slider .swiper-pagination-bullet {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
