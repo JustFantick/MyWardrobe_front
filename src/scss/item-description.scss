@@ -126,6 +126,7 @@
 		img,
 		picture {
 			height: 100%;
+			max-width: 100%;
 			border-radius: 25px;
 			object-fit: contain;
 		}
@@ -178,7 +179,7 @@
 
 	//slider pagination
 	.swiper-pagination {
-		//bottom: 3% !important;
+		bottom: 3% !important;
 	}
 
 	.swiper-pagination-bullet {
