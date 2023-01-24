@@ -15,8 +15,10 @@
 		margin: 0 auto;
 		padding: 0 20px;
 
+
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		gap: adaptValue(50, 25);
 	}
 
@@ -114,8 +116,9 @@
 	padding: 0 adaptValue(63, 36) !important;
 
 	.swiper-slide {
+		//max-height: adaptValue(517, 250);
 		max-width: adaptValue(550, 280px);
-		max-height: adaptValue(517, 250);
+		max-height: 80vh;
 		border-radius: 25px;
 		overflow: hidden;
 
@@ -191,12 +194,6 @@
 		}
 	}
 }
-
-.swiper-autoheight,
-.swiper-autoheight .swiper-slide {
-	//height: 100% !important;
-}
-
 //slider ends
 
 //Sections Amount & Sizes
