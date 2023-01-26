@@ -456,7 +456,7 @@ body.lock {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -590,6 +590,8 @@ body.lock {
 }
 
 .mycart-item {
+  width: 100%;
+  max-width: 320px;
   padding: 25px 20px 17px 20px;
   background-color: #d9d9d9;
   border-radius: 25px;
@@ -1149,6 +1151,9 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: calc(25px + 25 * ((100vw - 390px) / 1530));
 }
 
@@ -1225,7 +1230,7 @@ body.lock {
 
 .item-img-slider .swiper-slide {
   max-width: calc(280pxpx + 270px * ((100vw - 390px) / 1530));
-  max-height: calc(250px + 267 * ((100vw - 390px) / 1530));
+  max-height: 80vh;
   border-radius: 25px;
   overflow: hidden;
   display: -webkit-box;
