@@ -19,24 +19,6 @@
 		@@include('html/footer.html',{})
 	</div>
 
-	<script type="module">
-		import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-
-		const swiper = new Swiper('.item-img-slider', {
-			speed: 300,
-			spaceBetween: 60,
-			loop: true,
-			autoHeight: true,
-			navigation: {
-				nextEl: '.swiper-button-next-custom',
-				prevEl: '.swiper-button-prev-custom',
-			},
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
-			},
-		});
-	</script>
 	<script src="js/app.min.js"></script>
 </body>
 
