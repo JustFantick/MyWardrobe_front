@@ -27,6 +27,28 @@ export function menuBurgerActivate() {
 			item.classList.remove('active');
 		}
 	}
+
+	const searchbarContainer = document.querySelector('.searchbar');
+	searchbarContainer.onclick = (e) => {
+		let target = e.target;
+		if (target.classList.contains('search_icon')) {
+			goToSearchPage();
+		} else if (target.classList.contains('searchbar__close-icon')) {
+			emptyInput();
+		}
+	};
+	document.querySelector('.searchbar__text').onsearch = () => goToSearchPage();
+
+
+	function goToSearchPage() {
+		const inputText = document.querySelector('.searchbar__text').value;
+		if (inputText != '') {
+			window.location.href = './search-page.php?requestText=' + inputText;
+		}
+	}
+	function emptyInput() {
+		document.querySelector('.searchbar__text').value = '';
+	}
 }
 
 export function cartActivate() {

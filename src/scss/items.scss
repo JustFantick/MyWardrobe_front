@@ -38,10 +38,17 @@
 		@media (max-width: 500px) {
 			grid-template-columns: repeat(1, minmax(200px, 300px));
 		}
-	}
-}
+		}
 
+		display: flex;
 
+		&__no-items-found {
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		}
 
 .sort-btn {
 	position: relative;
@@ -224,6 +231,40 @@
 			img {
 				max-height: 300px;
 			}
+		}
+
+		position: relative;
+	}
+
+	&__on-img-hover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.55);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease-in-out;
+
+		.button {
+			border-color: transparent;
+			&:hover {
+				background: #E4E4E4;
+				color: black;
+			}
+		}
+	}
+
+	&:hover {
+		.item-cart__on-img-hover {
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 

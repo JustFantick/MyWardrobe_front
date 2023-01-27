@@ -54,12 +54,10 @@ $btnPadTop: 10px;
 	color: #000000;
 	cursor: pointer;
 
-	@media (min-width: 768px) {
-		&:hover {
-			color: #E4E4E4;
-			background-color: #000;
-			border: 2px solid #E4E4E4;
-		}
+	&:hover {
+		color: #E4E4E4;
+		background-color: #000;
+		border: 2px solid #E4E4E4;
 	}
 
 	&.warning {

@@ -88,6 +88,10 @@
 		line-height: 1;
 		color: #000000;
 		margin-left: adaptValue(25, 15);
+
+		span {
+			color: red;
+		}
 	}
 
 	&__input {
