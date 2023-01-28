@@ -141,6 +141,9 @@ export function getCartWorked() {
 		let list = document.querySelectorAll('.mycart-item');
 		let counter = 0;
 		list.forEach(item => item.setAttribute('index', counter++));
+
+		//updatePrice
+		updateTotalCost();
 	}
 
 	function sizesGetWorked(itemWrapper) {
