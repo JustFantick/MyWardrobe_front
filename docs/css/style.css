@@ -1619,7 +1619,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .form-section__input.phone input {
-  max-width: 110px;
+  max-width: calc(105px + 15 * ((100vw - 390px) / 1530));
   background: #D9D9D9;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
