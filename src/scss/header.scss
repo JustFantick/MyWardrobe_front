@@ -298,9 +298,11 @@
 	left: 0;
 	z-index: -1;
 	opacity: 0;
+	visibility: hidden;
 
 	&.active {
 		opacity: 1;
+		visibility: visible;
 		z-index: 110;
 
 		.mycart-popup__content {
@@ -397,7 +399,7 @@
 
 .mycart-item {
 	width: 100%;
-		max-width: 320px;
+	max-width: 320px;
 	padding: 25px 20px 17px 20px;
 	background-color: #d9d9d9;
 	border-radius: 25px;

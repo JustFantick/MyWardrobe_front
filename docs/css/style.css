@@ -476,6 +476,7 @@ input[type=search]::-webkit-search-results-decoration {
   left: 0;
   z-index: -1;
   opacity: 0;
+  visibility: hidden;
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
@@ -494,6 +495,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .mycart-popup.active {
   opacity: 1;
+  visibility: visible;
   z-index: 110;
 }
 
